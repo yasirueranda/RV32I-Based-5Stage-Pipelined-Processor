@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/sem 5/DSD/groupProject/BranchPredictor/BranchPredictor.srcs/sources_1/new/BranchPredictor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPredictor
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/sem 5/DSD/groupProject/BranchPredictor/BranchPredictor.srcs/sim_1/new/BranchPredictTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPredictTB

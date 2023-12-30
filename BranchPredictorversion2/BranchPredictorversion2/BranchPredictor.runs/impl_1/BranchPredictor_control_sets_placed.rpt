@@ -1,0 +1,112 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Sun Dec 31 00:55:19 2023
+| Host         : DESKTOP-5C5TPG5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file BranchPredictor_control_sets_placed.rpt
+| Design       : BranchPredictor
+| Device       : xc7z010
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    34 |
+|    Minimum number of control sets                        |    34 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   203 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    34 |
+| >= 0 to < 4        |    33 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     0 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              12 |            3 |
+| No           | Yes                   | No                     |              65 |           60 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+---------------+-----------------------------------+------------------+----------------+--------------+
+|             Clock Signal            | Enable Signal |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------+---------------+-----------------------------------+------------------+----------------+--------------+
+|  branch_instruction_valid_IBUF_BUFG |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              1 |         1.00 |
+|  predictor_table_reg[10][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[4][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[0][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[1][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[17][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  predictor_table_reg[11][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[12][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[16][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[18][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[13][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[15][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[19][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[14][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[25][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[21][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  predictor_table_reg[29][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[24][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[28][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  predictor_table_reg[2][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[23][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[27][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[22][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[20][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  predictor_table_reg[26][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[30][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  predictor_table_reg[9][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[7][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[31][1]_i_2_n_0 |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[8][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[5][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[6][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+|  predictor_table_reg[3][1]_i_2_n_0  |               | predictor_table_reg[0][1]_i_3_n_0 |                2 |              2 |         1.00 |
+| ~clk_IBUF_BUFG                      |               | predictor_table_reg[0][1]_i_3_n_0 |                3 |             12 |         4.00 |
++-------------------------------------+---------------+-----------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1703991830">
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/PredictorSel.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/BranchPredictor.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/PC_4.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/PC_4.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/TargetPC.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/adder.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/adder.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/alu.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/aludec.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/aludec.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/branchunit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/branchunit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/controller.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/dmem.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/dmem.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/extend.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/extend.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/flopenr.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopenr.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/flopr.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopr.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/floprc.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/floprc.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/forward_unit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/hazard_detection_unit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/hexcoder.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/imem.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/imem.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/load_unit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/load_unit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/maindec.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/maindec.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/output_mux.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/output_mux.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/regfile.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/regfile.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/store_unit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/store_unit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/top.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/BranchPredictorVersion2test/hazard_unit.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/hazard_unit.sv"/>
+        <Attr Name="ImportTime" Val="1703987372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

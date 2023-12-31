@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Sun Dec 31 08:35:38 2023
+| Date         : Sun Dec 31 12:32:20 2023
 | Host         : DESKTOP-5C5TPG5 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -41,8 +41,8 @@ Timing Summary Report
 
 Rule       Severity          Description                  Violations  
 ---------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  615         
-TIMING-20  Warning           Non-clocked latch            65          
+TIMING-17  Critical Warning  Non-clocked sequential cell  579         
+TIMING-20  Warning           Non-clocked latch            64          
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -52,10 +52,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (10536)
+1. checking no_clock (10499)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (1880)
+4. checking unconstrained_internal_endpoints (1806)
 5. checking no_input_delay (1)
 6. checking no_output_delay (60)
 7. checking multiple_clock (0)
@@ -65,21 +65,23 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (64)
 
-1. checking no_clock (10536)
+1. checking no_clock (10499)
 ----------------------------
- There are 615 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 579 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_branch_prediction2_reg/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_branch_prediction_reg/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index2_reg[0]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_branch_valid_reg/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index2_reg[1]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index_reg[0]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index2_reg[2]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index_reg[1]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index2_reg[3]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index_reg[2]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index2_reg[4]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index_reg[3]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: BP/delayed_history_index_reg[4]/Q (HIGH)
 
  There are 64 register/latch pins with no clock driven by root clock pin: EX_MEM_1/q_reg[174]/Q (HIGH)
 
@@ -301,8 +303,6 @@ Table of Contents
 
  There are 64 register/latch pins with no clock driven by root clock pin: ID_EX_1/q_reg[61]/Q (HIGH)
 
- There are 65 register/latch pins with no clock driven by root clock pin: IF_ID_1/q_reg[95]/Q (HIGH)
-
  There are 64 register/latch pins with no clock driven by root clock pin: MEM_WB_1/q_reg[173]/Q (HIGH)
 
  There are 64 register/latch pins with no clock driven by root clock pin: MEM_WB_1/q_reg[174]/Q (HIGH)
@@ -390,9 +390,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (1880)
+4. checking unconstrained_internal_endpoints (1806)
 ---------------------------------------------------
- There are 1880 pins that are not constrained for maximum delay. (HIGH)
+ There are 1806 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -451,7 +451,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 1940          inf        0.000                      0                 1940           NA           NA                      NA                    NA  
+        inf        0.000                      0                 1866          inf        0.000                      0                 1866           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -520,439 +520,691 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          1940 Endpoints
-Min Delay          1940 Endpoints
+Max Delay          1866 Endpoints
+Min Delay          1866 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex7[6]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.880ns  (logic 6.498ns (26.117%)  route 18.382ns (73.883%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          3.208    16.463    pcadder/predictionOut
-    SLICE_X28Y46         LUT6 (Prop_lut6_I4_O)        0.124    16.587 r  pcadder/hex7_OBUF[6]_inst_i_47/O
-                         net (fo=1, routed)           0.574    17.161    IF_ID_1/hex7_OBUF[6]_inst_i_9
-    SLICE_X32Y46         LUT6 (Prop_lut6_I5_O)        0.124    17.285 r  IF_ID_1/hex7_OBUF[6]_inst_i_25/O
-                         net (fo=1, routed)           0.680    17.965    MEM_WB_1/hex7_OBUF[6]_inst_i_3
-    SLICE_X41Y45         LUT6 (Prop_lut6_I0_O)        0.124    18.089 r  MEM_WB_1/hex7_OBUF[6]_inst_i_9/O
-                         net (fo=1, routed)           0.000    18.089    EX_MEM_1/hex7_OBUF[1]_inst_i_1_3
-    SLICE_X41Y45         MUXF7 (Prop_muxf7_I1_O)      0.217    18.306 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
-                         net (fo=7, routed)           1.567    19.873    EX_MEM_1/out/out_bus[28]
-    SLICE_X43Y65         LUT4 (Prop_lut4_I1_O)        0.329    20.202 r  EX_MEM_1/hex7_OBUF[6]_inst_i_1/O
-                         net (fo=1, routed)           1.860    22.062    hex7_OBUF[6]
-    F19                  OBUF (Prop_obuf_I_O)         2.818    24.880 r  hex7_OBUF[6]_inst/O
-                         net (fo=0)                   0.000    24.880    hex7[6]
-    F19                                                               r  hex7[6] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex6[3]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.763ns  (logic 6.540ns (26.409%)  route 18.224ns (73.591%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          2.880    16.135    pcadder/predictionOut
-    SLICE_X28Y44         LUT6 (Prop_lut6_I4_O)        0.124    16.259 r  pcadder/hex6_OBUF[6]_inst_i_45/O
-                         net (fo=1, routed)           1.022    17.280    ID_EX_1/hex6_OBUF[6]_inst_i_7
-    SLICE_X32Y47         LUT6 (Prop_lut6_I5_O)        0.124    17.404 r  ID_EX_1/hex6_OBUF[6]_inst_i_18/O
-                         net (fo=1, routed)           0.567    17.972    MEM_WB_1/hex6_OBUF[6]_inst_i_2
-    SLICE_X40Y47         LUT6 (Prop_lut6_I0_O)        0.124    18.096 r  MEM_WB_1/hex6_OBUF[6]_inst_i_7/O
-                         net (fo=1, routed)           0.000    18.096    EX_MEM_1/hex6_OBUF[1]_inst_i_1_0
-    SLICE_X40Y47         MUXF7 (Prop_muxf7_I1_O)      0.217    18.313 r  EX_MEM_1/hex6_OBUF[6]_inst_i_2/O
-                         net (fo=7, routed)           1.402    19.715    EX_MEM_1/out/out_bus[27]
-    SLICE_X43Y57         LUT4 (Prop_lut4_I0_O)        0.327    20.042 r  EX_MEM_1/hex6_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           1.860    21.901    hex6_OBUF[3]
-    K14                  OBUF (Prop_obuf_I_O)         2.862    24.763 r  hex6_OBUF[3]_inst/O
-                         net (fo=0)                   0.000    24.763    hex6[3]
-    K14                                                               r  hex6[3] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex6[5]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.729ns  (logic 6.488ns (26.237%)  route 18.241ns (73.763%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          2.880    16.135    pcadder/predictionOut
-    SLICE_X28Y44         LUT6 (Prop_lut6_I4_O)        0.124    16.259 r  pcadder/hex6_OBUF[6]_inst_i_45/O
-                         net (fo=1, routed)           1.022    17.280    ID_EX_1/hex6_OBUF[6]_inst_i_7
-    SLICE_X32Y47         LUT6 (Prop_lut6_I5_O)        0.124    17.404 r  ID_EX_1/hex6_OBUF[6]_inst_i_18/O
-                         net (fo=1, routed)           0.567    17.972    MEM_WB_1/hex6_OBUF[6]_inst_i_2
-    SLICE_X40Y47         LUT6 (Prop_lut6_I0_O)        0.124    18.096 r  MEM_WB_1/hex6_OBUF[6]_inst_i_7/O
-                         net (fo=1, routed)           0.000    18.096    EX_MEM_1/hex6_OBUF[1]_inst_i_1_0
-    SLICE_X40Y47         MUXF7 (Prop_muxf7_I1_O)      0.217    18.313 r  EX_MEM_1/hex6_OBUF[6]_inst_i_2/O
-                         net (fo=7, routed)           1.400    19.713    EX_MEM_1/out/out_bus[27]
-    SLICE_X43Y57         LUT4 (Prop_lut4_I2_O)        0.327    20.040 r  EX_MEM_1/hex6_OBUF[5]_inst_i_1/O
-                         net (fo=1, routed)           1.879    21.919    hex6_OBUF[5]
-    H15                  OBUF (Prop_obuf_I_O)         2.811    24.729 r  hex6_OBUF[5]_inst/O
-                         net (fo=0)                   0.000    24.729    hex6[5]
-    H15                                                               r  hex6[5] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex6[6]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.676ns  (logic 6.490ns (26.300%)  route 18.186ns (73.700%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          3.078    16.333    pcadder/predictionOut
-    SLICE_X31Y43         LUT6 (Prop_lut6_I4_O)        0.124    16.457 r  pcadder/hex6_OBUF[6]_inst_i_58/O
-                         net (fo=1, routed)           0.686    17.143    ID_EX_1/hex6_OBUF[6]_inst_i_13
-    SLICE_X36Y43         LUT6 (Prop_lut6_I5_O)        0.124    17.267 r  ID_EX_1/hex6_OBUF[6]_inst_i_39/O
-                         net (fo=1, routed)           0.792    18.059    MEM_WB_1/hex6_OBUF[6]_inst_i_5
-    SLICE_X42Y46         LUT6 (Prop_lut6_I0_O)        0.124    18.183 r  MEM_WB_1/hex6_OBUF[6]_inst_i_13/O
-                         net (fo=1, routed)           0.000    18.183    EX_MEM_1/hex6_OBUF[1]_inst_i_1_2
-    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    18.397 r  EX_MEM_1/hex6_OBUF[6]_inst_i_5/O
-                         net (fo=7, routed)           1.272    19.669    EX_MEM_1/out/out_bus[25]
-    SLICE_X43Y57         LUT4 (Prop_lut4_I3_O)        0.326    19.995 r  EX_MEM_1/hex6_OBUF[6]_inst_i_1/O
-                         net (fo=1, routed)           1.865    21.860    hex6_OBUF[6]
-    G20                  OBUF (Prop_obuf_I_O)         2.816    24.676 r  hex6_OBUF[6]_inst/O
-                         net (fo=0)                   0.000    24.676    hex6[6]
-    G20                                                               r  hex6[6] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex5[5]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.633ns  (logic 6.520ns (26.467%)  route 18.113ns (73.533%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          2.902    16.157    pcadder/predictionOut
-    SLICE_X27Y43         LUT6 (Prop_lut6_I4_O)        0.124    16.281 r  pcadder/hex5_OBUF[6]_inst_i_62/O
-                         net (fo=1, routed)           0.960    17.241    IF_ID_1/hex5_OBUF[6]_inst_i_14
-    SLICE_X30Y44         LUT6 (Prop_lut6_I5_O)        0.124    17.365 r  IF_ID_1/hex5_OBUF[6]_inst_i_38/O
-                         net (fo=1, routed)           0.165    17.530    MEM_WB_1/hex5_OBUF[6]_inst_i_5
-    SLICE_X30Y44         LUT6 (Prop_lut6_I0_O)        0.124    17.654 r  MEM_WB_1/hex5_OBUF[6]_inst_i_14/O
-                         net (fo=1, routed)           0.000    17.654    EX_MEM_1/hex5_OBUF[3]_inst_i_1_1
-    SLICE_X30Y44         MUXF7 (Prop_muxf7_I1_O)      0.214    17.868 r  EX_MEM_1/hex5_OBUF[6]_inst_i_5/O
-                         net (fo=7, routed)           1.688    19.556    EX_MEM_1/out/out_bus[21]
-    SLICE_X43Y51         LUT4 (Prop_lut4_I1_O)        0.325    19.881 r  EX_MEM_1/hex5_OBUF[5]_inst_i_1/O
-                         net (fo=1, routed)           1.905    21.786    hex5_OBUF[5]
-    L15                  OBUF (Prop_obuf_I_O)         2.847    24.633 r  hex5_OBUF[5]_inst/O
-                         net (fo=0)                   0.000    24.633    hex5[5]
-    L15                                                               r  hex5[5] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex5[6]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.597ns  (logic 6.517ns (26.496%)  route 18.079ns (73.504%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          2.902    16.157    pcadder/predictionOut
-    SLICE_X27Y43         LUT6 (Prop_lut6_I4_O)        0.124    16.281 r  pcadder/hex5_OBUF[6]_inst_i_62/O
-                         net (fo=1, routed)           0.960    17.241    IF_ID_1/hex5_OBUF[6]_inst_i_14
-    SLICE_X30Y44         LUT6 (Prop_lut6_I5_O)        0.124    17.365 r  IF_ID_1/hex5_OBUF[6]_inst_i_38/O
-                         net (fo=1, routed)           0.165    17.530    MEM_WB_1/hex5_OBUF[6]_inst_i_5
-    SLICE_X30Y44         LUT6 (Prop_lut6_I0_O)        0.124    17.654 r  MEM_WB_1/hex5_OBUF[6]_inst_i_14/O
-                         net (fo=1, routed)           0.000    17.654    EX_MEM_1/hex5_OBUF[3]_inst_i_1_1
-    SLICE_X30Y44         MUXF7 (Prop_muxf7_I1_O)      0.214    17.868 r  EX_MEM_1/hex5_OBUF[6]_inst_i_5/O
-                         net (fo=7, routed)           1.699    19.567    EX_MEM_1/out/out_bus[21]
-    SLICE_X43Y51         LUT4 (Prop_lut4_I3_O)        0.327    19.894 r  EX_MEM_1/hex5_OBUF[6]_inst_i_1/O
-                         net (fo=1, routed)           1.860    21.754    hex5_OBUF[6]
-    L14                  OBUF (Prop_obuf_I_O)         2.843    24.597 r  hex5_OBUF[6]_inst/O
-                         net (fo=0)                   0.000    24.597    hex5[6]
-    L14                                                               r  hex5[6] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex7[4]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.595ns  (logic 6.269ns (25.488%)  route 18.326ns (74.512%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          3.208    16.463    pcadder/predictionOut
-    SLICE_X28Y46         LUT6 (Prop_lut6_I4_O)        0.124    16.587 r  pcadder/hex7_OBUF[6]_inst_i_47/O
-                         net (fo=1, routed)           0.574    17.161    IF_ID_1/hex7_OBUF[6]_inst_i_9
-    SLICE_X32Y46         LUT6 (Prop_lut6_I5_O)        0.124    17.285 r  IF_ID_1/hex7_OBUF[6]_inst_i_25/O
-                         net (fo=1, routed)           0.680    17.965    MEM_WB_1/hex7_OBUF[6]_inst_i_3
-    SLICE_X41Y45         LUT6 (Prop_lut6_I0_O)        0.124    18.089 r  MEM_WB_1/hex7_OBUF[6]_inst_i_9/O
-                         net (fo=1, routed)           0.000    18.089    EX_MEM_1/hex7_OBUF[1]_inst_i_1_3
-    SLICE_X41Y45         MUXF7 (Prop_muxf7_I1_O)      0.217    18.306 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
-                         net (fo=7, routed)           1.567    19.873    EX_MEM_1/out/out_bus[28]
-    SLICE_X43Y65         LUT4 (Prop_lut4_I3_O)        0.299    20.172 r  EX_MEM_1/hex7_OBUF[4]_inst_i_1/O
-                         net (fo=1, routed)           1.804    21.976    hex7_OBUF[4]
-    G17                  OBUF (Prop_obuf_I_O)         2.619    24.595 r  hex7_OBUF[4]_inst/O
-                         net (fo=0)                   0.000    24.595    hex7[4]
-    G17                                                               r  hex7[4] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex7[3]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.565ns  (logic 6.371ns (25.935%)  route 18.194ns (74.065%))
-  Logic Levels:           12  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=4 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          3.058    16.313    pcadder/predictionOut
-    SLICE_X28Y45         LUT6 (Prop_lut6_I4_O)        0.124    16.437 r  pcadder/hex7_OBUF[6]_inst_i_18/O
-                         net (fo=1, routed)           1.196    17.632    MEM_WB_1/hex7_OBUF[6]_inst_i_2
-    SLICE_X39Y47         LUT6 (Prop_lut6_I0_O)        0.124    17.756 r  MEM_WB_1/hex7_OBUF[6]_inst_i_7/O
-                         net (fo=1, routed)           0.000    17.756    EX_MEM_1/hex7_OBUF[1]_inst_i_1_0
-    SLICE_X39Y47         MUXF7 (Prop_muxf7_I1_O)      0.217    17.973 r  EX_MEM_1/hex7_OBUF[6]_inst_i_2/O
-                         net (fo=7, routed)           1.641    19.615    EX_MEM_1/out/out_bus[31]
-    SLICE_X43Y65         LUT4 (Prop_lut4_I0_O)        0.327    19.942 r  EX_MEM_1/hex7_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           1.806    21.748    hex7_OBUF[3]
-    G18                  OBUF (Prop_obuf_I_O)         2.817    24.565 r  hex7_OBUF[3]_inst/O
-                         net (fo=0)                   0.000    24.565    hex7[3]
-    G18                                                               r  hex7[3] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            hex5[4]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.533ns  (logic 6.499ns (26.490%)  route 18.034ns (73.510%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          2.902    16.157    pcadder/predictionOut
-    SLICE_X27Y43         LUT6 (Prop_lut6_I4_O)        0.124    16.281 f  pcadder/hex5_OBUF[6]_inst_i_62/O
-                         net (fo=1, routed)           0.960    17.241    IF_ID_1/hex5_OBUF[6]_inst_i_14
-    SLICE_X30Y44         LUT6 (Prop_lut6_I5_O)        0.124    17.365 f  IF_ID_1/hex5_OBUF[6]_inst_i_38/O
-                         net (fo=1, routed)           0.165    17.530    MEM_WB_1/hex5_OBUF[6]_inst_i_5
-    SLICE_X30Y44         LUT6 (Prop_lut6_I0_O)        0.124    17.654 f  MEM_WB_1/hex5_OBUF[6]_inst_i_14/O
-                         net (fo=1, routed)           0.000    17.654    EX_MEM_1/hex5_OBUF[3]_inst_i_1_1
-    SLICE_X30Y44         MUXF7 (Prop_muxf7_I1_O)      0.214    17.868 f  EX_MEM_1/hex5_OBUF[6]_inst_i_5/O
-                         net (fo=7, routed)           1.689    19.557    EX_MEM_1/out/out_bus[21]
-    SLICE_X43Y51         LUT4 (Prop_lut4_I1_O)        0.325    19.882 r  EX_MEM_1/hex5_OBUF[4]_inst_i_1/O
-                         net (fo=1, routed)           1.824    21.707    hex5_OBUF[4]
-    M14                  OBUF (Prop_obuf_I_O)         2.826    24.533 r  hex5_OBUF[4]_inst/O
-                         net (fo=0)                   0.000    24.533    hex5[4]
-    M14                                                               r  hex5[4] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
   Destination:            hex7[5]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.525ns  (logic 6.493ns (26.473%)  route 18.033ns (73.527%))
-  Logic Levels:           13  (IBUF=1 LDCE=1 LUT1=1 LUT3=1 LUT4=1 LUT5=1 LUT6=5 MUXF7=1 OBUF=1)
+  Data Path Delay:        28.433ns  (logic 6.908ns (24.295%)  route 21.525ns (75.705%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    T12                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    T12                  IBUF (Prop_ibuf_I_O)         1.027     1.027 f  reset_IBUF_inst/O
-                         net (fo=103, routed)         2.373     3.400    ID_EX_1/reset_IBUF
-    SLICE_X27Y45         LUT1 (Prop_lut1_I0_O)        0.124     3.524 r  ID_EX_1/q[221]_i_2/O
-                         net (fo=592, routed)         4.525     8.049    BP/delayed_branch_prediction2_reg_1
-    SLICE_X41Y23         LDCE (SetClr_ldce_CLR_Q)     0.885     8.934 f  BP/predictor_table_reg[27][1]/Q
-                         net (fo=5, routed)           0.980     9.914    BP/predictor_table_reg_n_0_[27][1]
-    SLICE_X39Y23         LUT6 (Prop_lut6_I1_O)        0.124    10.038 f  BP/delayed_branch_prediction_i_11/O
-                         net (fo=1, routed)           1.036    11.073    BP/delayed_branch_prediction_i_11_n_0
-    SLICE_X34Y24         LUT6 (Prop_lut6_I5_O)        0.124    11.197 f  BP/delayed_branch_prediction_i_3/O
-                         net (fo=1, routed)           0.766    11.963    IF_ID_1/delayed_branch_prediction_reg_0
-    SLICE_X34Y27         LUT5 (Prop_lut5_I4_O)        0.150    12.113 f  IF_ID_1/delayed_branch_prediction_i_1/O
-                         net (fo=2, routed)           0.813    12.927    BP/prediction
-    SLICE_X34Y28         LUT3 (Prop_lut3_I2_O)        0.328    13.255 f  BP/q[31]_i_4/O
-                         net (fo=64, routed)          3.208    16.463    pcadder/predictionOut
-    SLICE_X28Y46         LUT6 (Prop_lut6_I4_O)        0.124    16.587 r  pcadder/hex7_OBUF[6]_inst_i_47/O
-                         net (fo=1, routed)           0.574    17.161    IF_ID_1/hex7_OBUF[6]_inst_i_9
-    SLICE_X32Y46         LUT6 (Prop_lut6_I5_O)        0.124    17.285 r  IF_ID_1/hex7_OBUF[6]_inst_i_25/O
-                         net (fo=1, routed)           0.680    17.965    MEM_WB_1/hex7_OBUF[6]_inst_i_3
-    SLICE_X41Y45         LUT6 (Prop_lut6_I0_O)        0.124    18.089 r  MEM_WB_1/hex7_OBUF[6]_inst_i_9/O
-                         net (fo=1, routed)           0.000    18.089    EX_MEM_1/hex7_OBUF[1]_inst_i_1_3
-    SLICE_X41Y45         MUXF7 (Prop_muxf7_I1_O)      0.217    18.306 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
-                         net (fo=7, routed)           1.361    19.667    EX_MEM_1/out/out_bus[28]
-    SLICE_X43Y65         LUT4 (Prop_lut4_I0_O)        0.325    19.992 r  EX_MEM_1/hex7_OBUF[5]_inst_i_1/O
-                         net (fo=1, routed)           1.716    21.709    hex7_OBUF[5]
-    F20                  OBUF (Prop_obuf_I_O)         2.817    24.525 r  hex7_OBUF[5]_inst/O
-                         net (fo=0)                   0.000    24.525    hex7[5]
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.750    23.422    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I2_O)        0.329    23.751 r  EX_MEM_1/hex7_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           1.864    25.615    hex7_OBUF[5]
+    F20                  OBUF (Prop_obuf_I_O)         2.818    28.433 r  hex7_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    28.433    hex7[5]
     F20                                                               r  hex7[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        28.373ns  (logic 6.905ns (24.338%)  route 21.468ns (75.662%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.749    23.421    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I2_O)        0.327    23.748 r  EX_MEM_1/hex7_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.808    25.556    hex7_OBUF[3]
+    G18                  OBUF (Prop_obuf_I_O)         2.817    28.373 r  hex7_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    28.373    hex7[3]
+    G18                                                               r  hex7[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        28.224ns  (logic 6.900ns (24.447%)  route 21.324ns (75.553%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.750    23.422    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I3_O)        0.327    23.749 r  EX_MEM_1/hex7_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.664    25.412    hex7_OBUF[1]
+    H20                  OBUF (Prop_obuf_I_O)         2.812    28.224 r  hex7_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    28.224    hex7[1]
+    H20                                                               r  hex7[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        28.161ns  (logic 6.679ns (23.718%)  route 21.482ns (76.282%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.750    23.422    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I3_O)        0.299    23.721 r  EX_MEM_1/hex7_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           1.821    25.542    hex7_OBUF[4]
+    G17                  OBUF (Prop_obuf_I_O)         2.619    28.161 r  hex7_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    28.161    hex7[4]
+    G17                                                               r  hex7[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        28.013ns  (logic 6.676ns (23.832%)  route 21.337ns (76.168%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.750    23.422    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I2_O)        0.299    23.721 r  EX_MEM_1/hex7_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.676    25.397    hex7_OBUF[0]
+    G19                  OBUF (Prop_obuf_I_O)         2.616    28.013 r  hex7_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    28.013    hex7[0]
+    G19                                                               r  hex7[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.999ns  (logic 6.672ns (23.828%)  route 21.327ns (76.172%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 f  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 f  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 f  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.749    23.421    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I1_O)        0.299    23.720 r  EX_MEM_1/hex7_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.668    25.387    hex7_OBUF[2]
+    J20                  OBUF (Prop_obuf_I_O)         2.612    27.999 r  hex7_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    27.999    hex7[2]
+    J20                                                               r  hex7[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex7[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.984ns  (logic 6.675ns (23.853%)  route 21.309ns (76.147%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.959    19.916    BP/predictionOut
+    SLICE_X29Y42         LUT6 (Prop_lut6_I4_O)        0.124    20.040 r  BP/hex7_OBUF[6]_inst_i_27/O
+                         net (fo=1, routed)           1.291    21.331    IF_ID_1/hex7_OBUF[6]_inst_i_3
+    SLICE_X40Y46         LUT5 (Prop_lut5_I1_O)        0.124    21.455 r  IF_ID_1/hex7_OBUF[6]_inst_i_10/O
+                         net (fo=1, routed)           0.000    21.455    EX_MEM_1/hex7_OBUF[0]_inst_i_1_2
+    SLICE_X40Y46         MUXF7 (Prop_muxf7_I1_O)      0.217    21.672 r  EX_MEM_1/hex7_OBUF[6]_inst_i_3/O
+                         net (fo=7, routed)           1.545    23.217    EX_MEM_1/out/out_bus[28]
+    SLICE_X43Y65         LUT4 (Prop_lut4_I1_O)        0.299    23.516 r  EX_MEM_1/hex7_OBUF[6]_inst_i_1/O
+                         net (fo=1, routed)           1.853    25.369    hex7_OBUF[6]
+    F19                  OBUF (Prop_obuf_I_O)         2.615    27.984 r  hex7_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    27.984    hex7[6]
+    F19                                                               r  hex7[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex6[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.649ns  (logic 6.950ns (25.136%)  route 20.699ns (74.864%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.685    19.642    BP/predictionOut
+    SLICE_X30Y41         LUT6 (Prop_lut6_I4_O)        0.124    19.766 r  BP/hex6_OBUF[6]_inst_i_19/O
+                         net (fo=1, routed)           1.073    20.839    ID_EX_1/hex6_OBUF[6]_inst_i_2
+    SLICE_X36Y44         LUT5 (Prop_lut5_I1_O)        0.124    20.963 r  ID_EX_1/hex6_OBUF[6]_inst_i_7/O
+                         net (fo=1, routed)           0.000    20.963    EX_MEM_1/hex6_OBUF[0]_inst_i_1_0
+    SLICE_X36Y44         MUXF7 (Prop_muxf7_I1_O)      0.217    21.180 r  EX_MEM_1/hex6_OBUF[6]_inst_i_2/O
+                         net (fo=7, routed)           1.420    22.600    EX_MEM_1/out/out_bus[27]
+    SLICE_X43Y57         LUT4 (Prop_lut4_I0_O)        0.327    22.927 r  EX_MEM_1/hex6_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.860    24.787    hex6_OBUF[3]
+    K14                  OBUF (Prop_obuf_I_O)         2.862    27.649 r  hex6_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    27.649    hex6[3]
+    K14                                                               r  hex6[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex6[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.421ns  (logic 6.913ns (25.209%)  route 20.508ns (74.791%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.685    19.642    BP/predictionOut
+    SLICE_X30Y41         LUT6 (Prop_lut6_I4_O)        0.124    19.766 r  BP/hex6_OBUF[6]_inst_i_19/O
+                         net (fo=1, routed)           1.073    20.839    ID_EX_1/hex6_OBUF[6]_inst_i_2
+    SLICE_X36Y44         LUT5 (Prop_lut5_I1_O)        0.124    20.963 r  ID_EX_1/hex6_OBUF[6]_inst_i_7/O
+                         net (fo=1, routed)           0.000    20.963    EX_MEM_1/hex6_OBUF[0]_inst_i_1_0
+    SLICE_X36Y44         MUXF7 (Prop_muxf7_I1_O)      0.217    21.180 r  EX_MEM_1/hex6_OBUF[6]_inst_i_2/O
+                         net (fo=7, routed)           1.415    22.595    EX_MEM_1/out/out_bus[27]
+    SLICE_X43Y57         LUT4 (Prop_lut4_I0_O)        0.325    22.920 r  EX_MEM_1/hex6_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.674    24.594    hex6_OBUF[1]
+    N15                  OBUF (Prop_obuf_I_O)         2.827    27.421 r  hex6_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    27.421    hex6[1]
+    N15                                                               r  hex6[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[35]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            hex6[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.319ns  (logic 6.901ns (25.259%)  route 20.419ns (74.741%))
+  Logic Levels:           22  (CARRY4=8 FDCE=1 LUT2=1 LUT3=1 LUT4=1 LUT5=2 LUT6=6 MUXF7=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y38         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[35]/C
+    SLICE_X42Y38         FDCE (Prop_fdce_C_Q)         0.524     0.524 r  EX_MEM_1/q_reg[35]/Q
+                         net (fo=37, routed)          1.295     1.819    EX_MEM_1/Q[8]
+    SLICE_X36Y32         LUT5 (Prop_lut5_I0_O)        0.124     1.943 f  EX_MEM_1/flags_EX_OBUF[3]_inst_i_13/O
+                         net (fo=36, routed)          3.084     5.028    MEM_WB_1/control_1[0]
+    SLICE_X42Y43         LUT6 (Prop_lut6_I0_O)        0.124     5.152 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_12/O
+                         net (fo=32, routed)          2.907     8.059    MEM_WB_1/flags_EX_OBUF[3]_inst_i_12_n_0
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124     8.183 r  MEM_WB_1/q[177]_i_5/O
+                         net (fo=3, routed)           1.153     9.336    ID_EX_1/operand_1_EX[2]
+    SLICE_X39Y34         LUT3 (Prop_lut3_I0_O)        0.124     9.460 r  ID_EX_1/q[177]_i_9/O
+                         net (fo=1, routed)           0.000     9.460    MEM_WB_1/S[1]
+    SLICE_X39Y34         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.858 r  MEM_WB_1/q_reg[177]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.858    MEM_WB_1/q_reg[177]_i_2_n_0
+    SLICE_X39Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.972 r  MEM_WB_1/q_reg[181]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.972    MEM_WB_1/q_reg[181]_i_2_n_0
+    SLICE_X39Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.086 r  MEM_WB_1/q_reg[185]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.086    MEM_WB_1/q_reg[185]_i_2_n_0
+    SLICE_X39Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.200 r  MEM_WB_1/q_reg[189]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.200    MEM_WB_1/q_reg[189]_i_2_n_0
+    SLICE_X39Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.314 r  MEM_WB_1/q_reg[193]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.314    MEM_WB_1/q_reg[193]_i_2_n_0
+    SLICE_X39Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.428 r  MEM_WB_1/q_reg[197]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.428    MEM_WB_1/q_reg[197]_i_2_n_0
+    SLICE_X39Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.542 r  MEM_WB_1/q_reg[201]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.542    MEM_WB_1/q_reg[201]_i_2_n_0
+    SLICE_X39Y41         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    10.798 r  MEM_WB_1/flags_EX_OBUF[3]_inst_i_2/O[2]
+                         net (fo=3, routed)           0.829    11.627    pcreg/flags_EX_OBUF[0]_inst_i_2_0[2]
+    SLICE_X38Y41         LUT2 (Prop_lut2_I1_O)        0.335    11.962 r  pcreg/flags_EX_OBUF[0]_inst_i_9/O
+                         net (fo=1, routed)           0.164    12.126    pcreg/flags_EX_OBUF[0]_inst_i_9_n_0
+    SLICE_X38Y41         LUT6 (Prop_lut6_I5_O)        0.355    12.481 r  pcreg/flags_EX_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           1.156    13.637    ID_EX_1/hex0_OBUF[6]_inst_i_51_3
+    SLICE_X38Y37         LUT6 (Prop_lut6_I5_O)        0.124    13.761 r  ID_EX_1/predictor_table_reg[0][1]_i_10/O
+                         net (fo=70, routed)          3.072    16.833    BP/PCSrc_EX
+    SLICE_X30Y27         LUT6 (Prop_lut6_I2_O)        0.124    16.957 r  BP/q[31]_i_5/O
+                         net (fo=64, routed)          2.685    19.642    BP/predictionOut
+    SLICE_X30Y41         LUT6 (Prop_lut6_I4_O)        0.124    19.766 r  BP/hex6_OBUF[6]_inst_i_19/O
+                         net (fo=1, routed)           1.073    20.839    ID_EX_1/hex6_OBUF[6]_inst_i_2
+    SLICE_X36Y44         LUT5 (Prop_lut5_I1_O)        0.124    20.963 r  ID_EX_1/hex6_OBUF[6]_inst_i_7/O
+                         net (fo=1, routed)           0.000    20.963    EX_MEM_1/hex6_OBUF[0]_inst_i_1_0
+    SLICE_X36Y44         MUXF7 (Prop_muxf7_I1_O)      0.217    21.180 r  EX_MEM_1/hex6_OBUF[6]_inst_i_2/O
+                         net (fo=7, routed)           1.140    22.320    EX_MEM_1/out/out_bus[27]
+    SLICE_X43Y57         LUT4 (Prop_lut4_I0_O)        0.328    22.648 r  EX_MEM_1/hex6_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           1.860    24.508    hex6_OBUF[5]
+    H15                  OBUF (Prop_obuf_I_O)         2.812    27.319 r  hex6_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    27.319    hex6[5]
+    H15                                                               r  hex6[5] (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -962,9 +1214,26 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 pcreg/q_reg[7]/C
+  Source:                 B/PC_4_IF_prev_reg[20]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[39]/D
+  Destination:            B/PC_4_IF_prev2_reg[20]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.200ns  (logic 0.146ns (73.026%)  route 0.054ns (26.974%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X26Y39         FDCE                         0.000     0.000 r  B/PC_4_IF_prev_reg[20]/C
+    SLICE_X26Y39         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  B/PC_4_IF_prev_reg[20]/Q
+                         net (fo=1, routed)           0.054     0.200    B/PC_4_IF_prev[20]
+    SLICE_X27Y39         FDCE                                         r  B/PC_4_IF_prev2_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pcreg/q_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            IF_ID_1/q_reg[37]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.214ns  (logic 0.146ns (68.214%)  route 0.068ns (31.786%))
@@ -972,61 +1241,112 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X29Y35         FDCE                         0.000     0.000 r  pcreg/q_reg[7]/C
-    SLICE_X29Y35         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[7]/Q
-                         net (fo=4, routed)           0.068     0.214    IF_ID_1/q_reg[63]_1[7]
-    SLICE_X29Y35         FDCE                                         r  IF_ID_1/q_reg[39]/D
+    SLICE_X29Y33         FDCE                         0.000     0.000 r  pcreg/q_reg[5]/C
+    SLICE_X29Y33         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[5]/Q
+                         net (fo=4, routed)           0.068     0.214    IF_ID_1/q_reg[63]_1[5]
+    SLICE_X29Y33         FDCE                                         r  IF_ID_1/q_reg[37]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 pcreg/q_reg[26]/C
+  Source:                 pcreg/q_reg[0]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[58]/D
+  Destination:            IF_ID_1/q_reg[32]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.225ns  (logic 0.146ns (64.849%)  route 0.079ns (35.151%))
+  Data Path Delay:        0.214ns  (logic 0.146ns (68.194%)  route 0.068ns (31.806%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y44         FDCE                         0.000     0.000 r  pcreg/q_reg[26]/C
-    SLICE_X31Y44         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[26]/Q
-                         net (fo=4, routed)           0.079     0.225    IF_ID_1/q_reg[63]_1[26]
-    SLICE_X31Y44         FDCE                                         r  IF_ID_1/q_reg[58]/D
+    SLICE_X31Y30         FDCE                         0.000     0.000 r  pcreg/q_reg[0]/C
+    SLICE_X31Y30         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[0]/Q
+                         net (fo=4, routed)           0.068     0.214    IF_ID_1/q_reg[63]_1[0]
+    SLICE_X31Y30         FDCE                                         r  IF_ID_1/q_reg[32]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 pcreg/q_reg[14]/C
+  Source:                 pcreg/q_reg[23]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[46]/D
+  Destination:            IF_ID_1/q_reg[55]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.226ns  (logic 0.146ns (64.536%)  route 0.080ns (35.464%))
+  Data Path Delay:        0.226ns  (logic 0.146ns (64.554%)  route 0.080ns (35.446%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y38         FDCE                         0.000     0.000 r  pcreg/q_reg[14]/C
-    SLICE_X31Y38         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[14]/Q
-                         net (fo=4, routed)           0.080     0.226    IF_ID_1/q_reg[63]_1[14]
-    SLICE_X31Y38         FDCE                                         r  IF_ID_1/q_reg[46]/D
+    SLICE_X31Y41         FDCE                         0.000     0.000 r  pcreg/q_reg[23]/C
+    SLICE_X31Y41         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[23]/Q
+                         net (fo=4, routed)           0.080     0.226    IF_ID_1/q_reg[63]_1[23]
+    SLICE_X31Y41         FDCE                                         r  IF_ID_1/q_reg[55]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 pcreg/q_reg[21]/C
+  Source:                 pcreg/q_reg[28]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[53]/D
+  Destination:            IF_ID_1/q_reg[60]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.226ns  (logic 0.146ns (64.536%)  route 0.080ns (35.464%))
+  Data Path Delay:        0.226ns  (logic 0.146ns (64.554%)  route 0.080ns (35.446%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y43         FDCE                         0.000     0.000 r  pcreg/q_reg[21]/C
-    SLICE_X27Y43         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[21]/Q
-                         net (fo=4, routed)           0.080     0.226    IF_ID_1/q_reg[63]_1[21]
-    SLICE_X27Y43         FDCE                                         r  IF_ID_1/q_reg[53]/D
+    SLICE_X29Y42         FDCE                         0.000     0.000 r  pcreg/q_reg[28]/C
+    SLICE_X29Y42         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[28]/Q
+                         net (fo=4, routed)           0.080     0.226    IF_ID_1/q_reg[63]_1[28]
+    SLICE_X29Y42         FDCE                                         r  IF_ID_1/q_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ID_EX_1/q_reg[72]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            EX_MEM_1/q_reg[56]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.233ns  (logic 0.133ns (57.089%)  route 0.100ns (42.911%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y36         FDCE                         0.000     0.000 r  ID_EX_1/q_reg[72]/C
+    SLICE_X40Y36         FDCE (Prop_fdce_C_Q)         0.133     0.133 r  ID_EX_1/q_reg[72]/Q
+                         net (fo=1, routed)           0.100     0.233    EX_MEM_1/q[21]
+    SLICE_X40Y36         FDCE                                         r  EX_MEM_1/q_reg[56]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pcreg/q_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            IF_ID_1/q_reg[34]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.238ns  (logic 0.146ns (61.250%)  route 0.092ns (38.750%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y30         FDCE                         0.000     0.000 r  pcreg/q_reg[2]/C
+    SLICE_X29Y30         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[2]/Q
+                         net (fo=12, routed)          0.092     0.238    IF_ID_1/q_reg[63]_1[2]
+    SLICE_X29Y30         FDCE                                         r  IF_ID_1/q_reg[34]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 EX_MEM_1/q_reg[51]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            MEM_WB_1/q_reg[50]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.246ns  (logic 0.133ns (54.045%)  route 0.113ns (45.955%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y31         FDCE                         0.000     0.000 r  EX_MEM_1/q_reg[51]/C
+    SLICE_X40Y31         FDCE (Prop_fdce_C_Q)         0.133     0.133 r  EX_MEM_1/q_reg[51]/Q
+                         net (fo=2, routed)           0.113     0.246    MEM_WB_1/q_reg[204]_0[15]
+    SLICE_X43Y32         FDCE                                         r  MEM_WB_1/q_reg[50]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1035,100 +1355,32 @@ Slack:                    inf
   Destination:            IF_ID_1/q_reg[57]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.228ns  (logic 0.146ns (63.923%)  route 0.082ns (36.077%))
+  Data Path Delay:        0.247ns  (logic 0.167ns (67.548%)  route 0.080ns (32.452%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y43         FDCE                         0.000     0.000 r  pcreg/q_reg[25]/C
-    SLICE_X31Y43         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  pcreg/q_reg[25]/Q
-                         net (fo=4, routed)           0.082     0.228    IF_ID_1/q_reg[63]_1[25]
-    SLICE_X31Y43         FDCE                                         r  IF_ID_1/q_reg[57]/D
+    SLICE_X30Y40         FDCE                         0.000     0.000 r  pcreg/q_reg[25]/C
+    SLICE_X30Y40         FDCE (Prop_fdce_C_Q)         0.167     0.167 r  pcreg/q_reg[25]/Q
+                         net (fo=4, routed)           0.080     0.247    IF_ID_1/q_reg[63]_1[25]
+    SLICE_X30Y40         FDCE                                         r  IF_ID_1/q_reg[57]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ID_EX_1/q_reg[91]/C
+  Source:                 pcreg/q_reg[27]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            EX_MEM_1/q_reg[75]/D
+  Destination:            IF_ID_1/q_reg[59]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.232ns  (logic 0.146ns (63.018%)  route 0.086ns (36.982%))
+  Data Path Delay:        0.247ns  (logic 0.167ns (67.531%)  route 0.080ns (32.469%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE                         0.000     0.000 r  ID_EX_1/q_reg[91]/C
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  ID_EX_1/q_reg[91]/Q
-                         net (fo=1, routed)           0.086     0.232    EX_MEM_1/q[40]
-    SLICE_X37Y46         FDCE                                         r  EX_MEM_1/q_reg[75]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 pcreg/q_reg[13]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[45]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.235ns  (logic 0.167ns (71.054%)  route 0.068ns (28.946%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X30Y38         FDCE                         0.000     0.000 r  pcreg/q_reg[13]/C
-    SLICE_X30Y38         FDCE (Prop_fdce_C_Q)         0.167     0.167 r  pcreg/q_reg[13]/Q
-                         net (fo=4, routed)           0.068     0.235    IF_ID_1/q_reg[63]_1[13]
-    SLICE_X30Y38         FDCE                                         r  IF_ID_1/q_reg[45]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 pcreg/q_reg[17]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            IF_ID_1/q_reg[49]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.246ns  (logic 0.167ns (67.848%)  route 0.079ns (32.152%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X30Y40         FDCE                         0.000     0.000 r  pcreg/q_reg[17]/C
-    SLICE_X30Y40         FDCE (Prop_fdce_C_Q)         0.167     0.167 r  pcreg/q_reg[17]/Q
-                         net (fo=4, routed)           0.079     0.246    IF_ID_1/q_reg[63]_1[17]
-    SLICE_X30Y40         FDCE                                         r  IF_ID_1/q_reg[49]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 A/Target_PC_prev_reg[22]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            A/Target_PC_prev2_reg[22]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.246ns  (logic 0.146ns (59.291%)  route 0.100ns (40.709%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X29Y41         FDCE                         0.000     0.000 r  A/Target_PC_prev_reg[22]/C
-    SLICE_X29Y41         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  A/Target_PC_prev_reg[22]/Q
-                         net (fo=1, routed)           0.100     0.246    A/Target_PC_prev[22]
-    SLICE_X31Y42         FDCE                                         r  A/Target_PC_prev2_reg[22]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 ID_EX_1/q_reg[93]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            EX_MEM_1/q_reg[77]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.247ns  (logic 0.146ns (59.093%)  route 0.101ns (40.907%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE                         0.000     0.000 r  ID_EX_1/q_reg[93]/C
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  ID_EX_1/q_reg[93]/Q
-                         net (fo=1, routed)           0.101     0.247    EX_MEM_1/q[42]
-    SLICE_X38Y47         FDCE                                         r  EX_MEM_1/q_reg[77]/D
+    SLICE_X30Y41         FDCE                         0.000     0.000 r  pcreg/q_reg[27]/C
+    SLICE_X30Y41         FDCE (Prop_fdce_C_Q)         0.167     0.167 r  pcreg/q_reg[27]/Q
+                         net (fo=4, routed)           0.080     0.247    IF_ID_1/q_reg[63]_1[27]
+    SLICE_X30Y41         FDCE                                         r  IF_ID_1/q_reg[59]/D
   -------------------------------------------------------------------    -------------------
 
 

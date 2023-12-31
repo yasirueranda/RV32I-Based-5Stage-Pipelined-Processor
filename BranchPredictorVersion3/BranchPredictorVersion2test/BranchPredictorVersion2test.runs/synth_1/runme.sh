@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1'
+HD_PWD='D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

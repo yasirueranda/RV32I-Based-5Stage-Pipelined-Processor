@@ -70,7 +70,7 @@ always@(negedge clk or negedge reset) begin
     end 
 end 
     // initialize when reset is 1 
-    always @(negedge clk or negedge reset,actual_branch_outcome )begin//delayed_branch_valid,delayed_branch_prediction, reset,delayed_history_index,actual_branch_outcome) begin
+    always @(clk,reset,actual_branch_outcome )begin//delayed_branch_valid,delayed_branch_prediction, reset,delayed_history_index,actual_branch_outcome) begin
         if (~reset) begin
             
             misprediction <= 0;

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Sun Dec 31 08:35:18 2023
+| Date         : Sun Dec 31 12:32:02 2023
 | Host         : DESKTOP-5C5TPG5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    36 |
-|    Minimum number of control sets                        |    36 |
+| Total control sets                                       |    35 |
+|    Minimum number of control sets                        |    35 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   208 |
+| Unused register locations in slices containing registers |   197 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    36 |
-| >= 0 to < 4        |    33 |
+| Total control sets |    35 |
+| >= 0 to < 4        |    32 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             426 |          156 |
-| No           | Yes                   | No                     |              65 |           52 |
+| No           | No                    | Yes                    |             390 |          146 |
+| No           | Yes                   | No                     |              64 |           56 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             101 |           52 |
+| Yes          | No                    | Yes                    |             101 |           51 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,42 +73,41 @@ Table of Contents
 +----------------------------------------+--------------------------+------------------+------------------+----------------+--------------+
 |              Clock Signal              |       Enable Signal      | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------------------------+--------------------------+------------------+------------------+----------------+--------------+
-|  instr_ID_BUFG[31]                     |                          | ID_EX_1/reset    |                1 |              1 |         1.00 |
+|  BP/predictor_table_reg[20][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[8][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[9][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[12][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
 |  BP/predictor_table_reg[14][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
 |  BP/predictor_table_reg[0][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[10][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[13][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[11][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[13][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
 |  BP/predictor_table_reg[15][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[18][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[20][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[22][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[17][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[1][1]_i_2_n_0  |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[10][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[11][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[1][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
 |  BP/predictor_table_reg[21][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[23][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[16][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[19][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[18][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[16][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
 |  BP/predictor_table_reg[24][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[31][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[29][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[4][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[30][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[25][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[3][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[28][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[2][1]_i_2_n_0  |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[5][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[27][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[26][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[9][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[8][1]_i_2_n_0  |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
-|  BP/predictor_table_reg[6][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[17][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[19][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
 |  BP/predictor_table_reg[7][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
-|  BP/predictor_table_reg[12][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[23][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[22][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[31][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[29][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[4][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[5][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[6][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[2][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[28][1]_i_2_n_0 |                          | ID_EX_1/reset    |                1 |              2 |         2.00 |
+|  BP/predictor_table_reg[25][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[30][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[3][1]_i_2_n_0  |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[26][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
+|  BP/predictor_table_reg[27][1]_i_2_n_0 |                          | ID_EX_1/reset    |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG                         | MEM_WB_1/q_reg[188]_0[3] |                  |               11 |             88 |         8.00 |
-| ~clk_IBUF_BUFG                         | ID_EX_1/E[0]             | ID_EX_1/reset    |               52 |            101 |         1.94 |
-| ~clk_IBUF_BUFG                         |                          | ID_EX_1/reset    |              156 |            426 |         2.73 |
+| ~clk_IBUF_BUFG                         | ID_EX_1/E[0]             | ID_EX_1/reset    |               51 |            101 |         1.98 |
+| ~clk_IBUF_BUFG                         |                          | ID_EX_1/reset    |              146 |            390 |         2.67 |
 +----------------------------------------+--------------------------+------------------+------------------+----------------+--------------+
 
 

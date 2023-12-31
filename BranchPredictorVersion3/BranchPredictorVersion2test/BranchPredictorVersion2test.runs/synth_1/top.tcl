@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1/top.tcl"
+  variable script "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,41 +76,41 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.cache/wt [current_project]
-set_property parent.project_path D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.xpr [current_project]
+set_property webtalk.parent_dir D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.cache/wt [current_project]
+set_property parent.project_path D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
-set_property ip_output_repo d:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.cache/ip [current_project]
+set_property ip_output_repo d:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/adder.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/aludec.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/controller.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/dmem.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/extend.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/floprc.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/imem.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/load_unit.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/maindec.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/regfile.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/store_unit.sv
-  D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/adder.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/aludec.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/controller.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/dmem.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/extend.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/floprc.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/imem.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/load_unit.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/maindec.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/regfile.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/store_unit.sv
+  D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv
 }
-read_verilog -library xil_defaultlib D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/new/PredictorSel.v
+read_verilog -library xil_defaultlib D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/new/PredictorSel.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -121,6 +121,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

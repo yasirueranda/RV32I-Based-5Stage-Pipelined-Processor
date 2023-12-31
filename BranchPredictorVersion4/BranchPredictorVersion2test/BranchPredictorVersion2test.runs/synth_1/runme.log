@@ -1,0 +1,462 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.906 ; gain = 6.816
+Command: read_checkpoint -auto_incremental -incremental D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18852
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (1#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/adder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/adder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'imem' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/imem.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (3#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/imem.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr__parameterized0' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv:1]
+	Parameter WIDTH bound to: 96 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopenr__parameterized0' (3#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'controller' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'aludec' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/aludec.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'aludec' (4#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/aludec.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'maindec' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/maindec.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'maindec' (5#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/maindec.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (6#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/regfile.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (7#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/regfile.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'extend' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/extend.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'extend' (8#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/extend.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'floprc' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/floprc.sv:1]
+	Parameter WIDTH bound to: 222 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'floprc' (9#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/floprc.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (10#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'branchunit' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv:1]
+INFO: [Synth 8-226] default block is never used [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'branchunit' (11#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv:1]
+	Parameter WIDTH bound to: 206 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (12#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/dmem.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (13#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/dmem.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'store_unit' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/store_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'store_unit' (14#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/store_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized0' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv:1]
+	Parameter WIDTH bound to: 205 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized0' (14#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'load_unit' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/load_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'load_unit' (15#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/load_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'output_mux' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv:1]
+INFO: [Synth 8-226] default block is never used [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'hexcoder' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'hexcoder' (16#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'output_mux' (17#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'forward_unit' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'forward_unit' (18#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection_unit' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection_unit' (19#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'BranchPredictor' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:23]
+WARNING: [Synth 8-567] referenced signal 'delayed_branch_valid' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:73]
+WARNING: [Synth 8-567] referenced signal 'delayed_branch_prediction' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:73]
+WARNING: [Synth 8-567] referenced signal 'predictor_table' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:73]
+WARNING: [Synth 8-567] referenced signal 'delayed_history_index' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:73]
+WARNING: [Synth 8-6014] Unused sequential element delayed_branch_valid2_reg was removed.  [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:59]
+WARNING: [Synth 8-6014] Unused sequential element delayed_history_index2_reg was removed.  [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:60]
+INFO: [Synth 8-6155] done synthesizing module 'BranchPredictor' (20#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'TargetPC' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv:23]
+WARNING: [Synth 8-567] referenced signal 'Target_PC_prev' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv:33]
+WARNING: [Synth 8-6014] Unused sequential element Target_PC_prev2_reg was removed.  [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv:51]
+INFO: [Synth 8-6155] done synthesizing module 'TargetPC' (21#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_4' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv:23]
+WARNING: [Synth 8-567] referenced signal 'PC_4_IF_prev' should be on the sensitivity list [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv:34]
+WARNING: [Synth 8-6014] Unused sequential element PC_4_IF_prev2_reg was removed.  [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'PC_4' (22#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'PredictorSel' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/new/PredictorSel.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PredictorSel' (23#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/new/PredictorSel.v:23]
+WARNING: [Synth 8-3848] Net rd2_MEM in module/entity top does not have driver. [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:143]
+WARNING: [Synth 8-3848] Net jumpsel_EX in module/entity top does not have driver. [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (24#1) [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:1]
+WARNING: [Synth 8-7129] Port branch_instruction_address[31] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[30] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[29] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[28] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[27] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[26] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[25] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[24] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[23] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[22] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[21] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[20] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[19] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[18] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[17] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[16] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[15] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[14] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[13] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[12] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[11] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[10] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[9] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[8] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[7] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[6] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[5] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module imem is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[0]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[1]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[2]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[3]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[4]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[5]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[6]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[7]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[8]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[9]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[10]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[11]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[12]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[13]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[14]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[15]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[16]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[17]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[18]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[19]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[20]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[21]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[22]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[23]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[24]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[25]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[26]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[27]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[28]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[29]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[30]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'predictor_table_reg[31]' [D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv:79]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   3 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	              222 Bit    Registers := 1     
+	              206 Bit    Registers := 1     
+	              205 Bit    Registers := 1     
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              128 Bit	(4 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  222 Bit        Muxes := 1     
+	  11 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 20    
+	   4 Input   32 Bit        Muxes := 1     
+	   8 Input   14 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	  97 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 98    
+	   4 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 65    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port branch_instruction_address[31] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[30] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[29] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[28] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[27] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[26] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[25] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[24] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[23] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[22] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[21] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[20] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[19] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[18] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[17] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[16] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[15] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[14] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[13] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[12] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[11] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[10] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[9] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[8] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[7] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[6] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_instruction_address[5] in module BranchPredictor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[31] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[30] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[29] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[28] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[27] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[26] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[25] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[24] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[23] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[22] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[21] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[20] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[19] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[18] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[17] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[16] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[15] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[14] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[13] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[12] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[11] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[10] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[9] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[8] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[7] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[6] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module imem is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------+-----------+----------------------+----------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------+-----------+----------------------+----------------+
+|rf          | rf_reg     | Implied   | 32 x 32              | RAM32M x 12    | 
+|dm          | RAM_reg    | Implied   | 4 x 32               | RAM16X1S x 32  | 
++------------+------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+------------+-----------+----------------------+----------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------+-----------+----------------------+----------------+
+|rf          | rf_reg     | Implied   | 32 x 32              | RAM32M x 12    | 
+|dm          | RAM_reg    | Implied   | 4 x 32               | RAM16X1S x 32  | 
++------------+------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    25|
+|3     |LUT1     |    36|
+|4     |LUT2     |   116|
+|5     |LUT3     |    98|
+|6     |LUT4     |   248|
+|7     |LUT5     |   195|
+|8     |LUT6     |   564|
+|9     |MUXF7    |    44|
+|10    |MUXF8    |     4|
+|11    |RAM32M   |    10|
+|12    |RAM32X1D |     4|
+|13    |FDCE     |   440|
+|14    |LDC      |    32|
+|15    |LDP      |    32|
+|16    |IBUF     |     8|
+|17    |OBUF     |    60|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------+------------------------+------+
+|      |Instance      |Module                  |Cells |
++------+--------------+------------------------+------+
+|1     |top           |                        |  1917|
+|2     |  A           |TargetPC                |    64|
+|3     |  B           |PC_4                    |    64|
+|4     |  BP          |BranchPredictor         |   295|
+|5     |  EX_MEM_1    |flopr                   |   246|
+|6     |  ID_EX_1     |floprc                  |   471|
+|7     |  IF_ID_1     |flopenr__parameterized0 |   204|
+|8     |  MEM_WB_1    |flopr__parameterized0   |   273|
+|9     |  branchadder |adder                   |   103|
+|10    |  ex          |extend                  |     3|
+|11    |  lu          |load_unit               |     8|
+|12    |  pcadder     |adder_0                 |    67|
+|13    |  pcreg       |flopenr                 |    35|
+|14    |  rf          |regfile                 |    14|
++------+--------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.906 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1261.906 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 151 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.906 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 78 instances were transformed.
+  LDC => LDCE: 32 instances
+  LDP => LDPE: 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: dfc4e455
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1261.906 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/sem5/DSD/groupProject/BranchPredictorversion2/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 31 14:25:20 2023...

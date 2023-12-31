@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TopTB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TopTB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="146.620 ns"></ZoomStartTime>
+      <ZoomEndTime time="249.980 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="200"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="71" />
+   <wvobject fp_name="/TopTB/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/selm" type="array">
+      <obj_property name="ElementShortName">selm[5:0]</obj_property>
+      <obj_property name="ObjectShortName">selm[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/flags_EX" type="array">
+      <obj_property name="ElementShortName">flags_EX[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_EX[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex7" type="array">
+      <obj_property name="ElementShortName">hex7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex6" type="array">
+      <obj_property name="ElementShortName">hex6[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex6[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex5" type="array">
+      <obj_property name="ElementShortName">hex5[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex5[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex4" type="array">
+      <obj_property name="ElementShortName">hex4[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex4[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex3" type="array">
+      <obj_property name="ElementShortName">hex3[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex3[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex2" type="array">
+      <obj_property name="ElementShortName">hex2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex2[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex1" type="array">
+      <obj_property name="ElementShortName">hex1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex1[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/hex0" type="array">
+      <obj_property name="ElementShortName">hex0[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hex0[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC4" type="array">
+      <obj_property name="ElementShortName">PC4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/missPrediction" type="logic">
+      <obj_property name="ElementShortName">missPrediction</obj_property>
+      <obj_property name="ObjectShortName">missPrediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC" type="array">
+      <obj_property name="ElementShortName">Target_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_ID" type="array">
+      <obj_property name="ElementShortName">Target_PC_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_ID[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_prev" type="array">
+      <obj_property name="ElementShortName">Target_PC_prev[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_prev[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_prev2" type="array">
+      <obj_property name="ElementShortName">Target_PC_prev2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_prev2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/pcreg/q" type="array">
+      <obj_property name="ElementShortName">q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">q[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC_4_IF_prev" type="array">
+      <obj_property name="ElementShortName">PC_4_IF_prev[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_4_IF_prev[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC_4_IF_prev2" type="array">
+      <obj_property name="ElementShortName">PC_4_IF_prev2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_4_IF_prev2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC_4_IF" type="array">
+      <obj_property name="ElementShortName">PC_4_IF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_4_IF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/rf[0]" type="array">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/rf[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/rf[2]" type="array">
+      <obj_property name="ElementShortName">[2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/dm/rd[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/dm/rd[1]" type="logic">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/dm/rd[2]" type="logic">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">[2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/bu/PCSrc" type="logic">
+      <obj_property name="ElementShortName">PCSrc</obj_property>
+      <obj_property name="ObjectShortName">PCSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/branchadder/y" type="array">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/branchadder/a" type="array">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/branchadder/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC" type="array">
+      <obj_property name="ElementShortName">Target_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_ID" type="array">
+      <obj_property name="ElementShortName">Target_PC_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_ID[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/branch_predictionOut" type="logic">
+      <obj_property name="ElementShortName">branch_predictionOut</obj_property>
+      <obj_property name="ObjectShortName">branch_predictionOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/branch_prediction" type="logic">
+      <obj_property name="ElementShortName">branch_prediction</obj_property>
+      <obj_property name="ObjectShortName">branch_prediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/flash_pipeline" type="logic">
+      <obj_property name="ElementShortName">flash_pipeline</obj_property>
+      <obj_property name="ObjectShortName">flash_pipeline</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/actual_branch_outcome" type="logic">
+      <obj_property name="ElementShortName">actual_branch_outcome</obj_property>
+      <obj_property name="ObjectShortName">actual_branch_outcome</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/predictor_table" type="array">
+      <obj_property name="ElementShortName">predictor_table[0:31][1:0]</obj_property>
+      <obj_property name="ObjectShortName">predictor_table[0:31][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/pcreg/q" type="array">
+      <obj_property name="ElementShortName">q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">q[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/pcreg/d" type="array">
+      <obj_property name="ElementShortName">d[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/branch_instruction_address" type="array">
+      <obj_property name="ElementShortName">branch_instruction_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_instruction_address[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/bu/PCSrc" type="logic">
+      <obj_property name="ElementShortName">PCSrc</obj_property>
+      <obj_property name="ObjectShortName">PCSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC4" type="array">
+      <obj_property name="ElementShortName">PC4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC_4_IF_prev" type="array">
+      <obj_property name="ElementShortName">PC_4_IF_prev[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_4_IF_prev[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/B/PC_4_IF_prev2" type="array">
+      <obj_property name="ElementShortName">PC_4_IF_prev2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_4_IF_prev2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/Predictor_sel/PredictionIn" type="logic">
+      <obj_property name="ElementShortName">PredictionIn</obj_property>
+      <obj_property name="ObjectShortName">PredictionIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/Predictor_sel/Prediction" type="logic">
+      <obj_property name="ElementShortName">Prediction</obj_property>
+      <obj_property name="ObjectShortName">Prediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/Predictor_sel/PredictionOut" type="logic">
+      <obj_property name="ElementShortName">PredictionOut</obj_property>
+      <obj_property name="ObjectShortName">PredictionOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/Predictor_sel/misprediction" type="logic">
+      <obj_property name="ElementShortName">misprediction</obj_property>
+      <obj_property name="ObjectShortName">misprediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/we3" type="logic">
+      <obj_property name="ElementShortName">we3</obj_property>
+      <obj_property name="ObjectShortName">we3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/a1" type="array">
+      <obj_property name="ElementShortName">a1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/a2" type="array">
+      <obj_property name="ElementShortName">a2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/a3" type="array">
+      <obj_property name="ElementShortName">a3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/wd3" type="array">
+      <obj_property name="ElementShortName">wd3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wd3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/rf/rf" type="array">
+      <obj_property name="ElementShortName">rf[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">rf[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC" type="array">
+      <obj_property name="ElementShortName">Target_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/missPrediction" type="logic">
+      <obj_property name="ElementShortName">missPrediction</obj_property>
+      <obj_property name="ObjectShortName">missPrediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/branch_prediction" type="logic">
+      <obj_property name="ElementShortName">branch_prediction</obj_property>
+      <obj_property name="ObjectShortName">branch_prediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_ID" type="array">
+      <obj_property name="ElementShortName">Target_PC_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_ID[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_prev" type="array">
+      <obj_property name="ElementShortName">Target_PC_prev[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_prev[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/A/Target_PC_prev2" type="array">
+      <obj_property name="ElementShortName">Target_PC_prev2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Target_PC_prev2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/branch_predictionOut" type="logic">
+      <obj_property name="ElementShortName">branch_predictionOut</obj_property>
+      <obj_property name="ObjectShortName">branch_predictionOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/misprediction" type="logic">
+      <obj_property name="ElementShortName">misprediction</obj_property>
+      <obj_property name="ObjectShortName">misprediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/flash_pipeline" type="logic">
+      <obj_property name="ElementShortName">flash_pipeline</obj_property>
+      <obj_property name="ObjectShortName">flash_pipeline</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/delayed_branch_valid" type="logic">
+      <obj_property name="ElementShortName">delayed_branch_valid</obj_property>
+      <obj_property name="ObjectShortName">delayed_branch_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/delayed_branch_valid2" type="logic">
+      <obj_property name="ElementShortName">delayed_branch_valid2</obj_property>
+      <obj_property name="ObjectShortName">delayed_branch_valid2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/actual_branch_outcome" type="logic">
+      <obj_property name="ElementShortName">actual_branch_outcome</obj_property>
+      <obj_property name="ObjectShortName">actual_branch_outcome</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/delayed_branch_prediction" type="logic">
+      <obj_property name="ElementShortName">delayed_branch_prediction</obj_property>
+      <obj_property name="ObjectShortName">delayed_branch_prediction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopTB/Top/BP/predictor_table" type="array">
+      <obj_property name="ElementShortName">predictor_table[0:31][1:0]</obj_property>
+      <obj_property name="ObjectShortName">predictor_table[0:31][1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

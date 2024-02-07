@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Dec 31 12:30:06 2023
+# Process ID: 14264
+# Current directory: D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1/top.vds
+# Journal file: D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.runs/synth_1\vivado.jou
+# Running On: DESKTOP-5C5TPG5, OS: Windows, CPU Frequency: 1690 MHz, CPU Physical cores: 4, Host memory: 16889 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

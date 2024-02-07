@@ -1,0 +1,41 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot TopTB_behav xil_defaultlib.TopTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 's4_b5' [D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:143]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 's7_b1' [D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:146]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.flopenr
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.flopenr(WIDTH=96)
+Compiling module xil_defaultlib.aludec
+Compiling module xil_defaultlib.maindec
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.extend
+Compiling module xil_defaultlib.floprc(WIDTH=222)
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.branchunit
+Compiling module xil_defaultlib.flopr(WIDTH=206)
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.store_unit
+Compiling module xil_defaultlib.flopr(WIDTH=205)
+Compiling module xil_defaultlib.load_unit
+Compiling module xil_defaultlib.hexcoder
+Compiling module xil_defaultlib.output_mux
+Compiling module xil_defaultlib.forward_unit
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.BranchPredictor
+Compiling module xil_defaultlib.TargetPC
+Compiling module xil_defaultlib.PC_4
+Compiling module xil_defaultlib.PredictorSel
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.TopTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TopTB_behav

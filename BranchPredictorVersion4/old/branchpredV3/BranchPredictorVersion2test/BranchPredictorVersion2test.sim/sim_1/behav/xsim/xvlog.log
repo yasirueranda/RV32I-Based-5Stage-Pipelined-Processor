@@ -1,0 +1,54 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/new/PredictorSel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PredictorSel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/BranchPredictor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPredictor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/PC_4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/TargetPC.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TargetPC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2458] undeclared symbol isAddSub, assumed default net type wire [D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/alu.sv:15]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/aludec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aludec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/branchunit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchunit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/extend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module extend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopenr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flopenr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/flopr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flopr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/floprc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floprc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/forward_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forward_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hazard_detection_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/hexcoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hexcoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/load_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module load_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/maindec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maindec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/output_mux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module output_mux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/store_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol rd2_MEM, assumed default net type wire [D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sources_1/imports/BranchPredictorVersion2test/top.sv:143]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.srcs/sim_1/new/TopTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TopTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/sem5/DSD/groupProject/pipelined/RV32I-Based-5Stage-Pipelined-Processor/BranchPredictorVersion3/BranchPredictorVersion2test/BranchPredictorVersion2test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

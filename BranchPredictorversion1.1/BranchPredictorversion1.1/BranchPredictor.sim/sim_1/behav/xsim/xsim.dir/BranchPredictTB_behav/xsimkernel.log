@@ -1,7 +1,0 @@
-Running: xsim.dir/BranchPredictTB_behav/xsimk.exe -simmode gui -wdb BranchPredictTB_behav.wdb -simrunnum 0 -socket 52158
-Design successfully loaded
-Design Loading Memory Usage: 7056 KB (Peak: 7056 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 7616 KB (Peak: 7616 KB)
-Simulation CPU Usage: 202 ms
